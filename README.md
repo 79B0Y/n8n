@@ -31,6 +31,20 @@ docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n
 
 Access the editor at http://localhost:5678
 
+## Install in a Python environment
+
+To run **n8n** from a Python virtual environment you can use
+[nodeenv](https://github.com/ekalinin/nodeenv) to install Node.js locally:
+
+```bash
+python3 -m venv n8n-env
+source n8n-env/bin/activate
+pip install nodeenv
+nodeenv -p
+npm install -g n8n
+n8n start
+```
+
 ## Resources
 
 - 📚 [Documentation](https://docs.n8n.io)
